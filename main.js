@@ -1,5 +1,5 @@
-async function fetchWeather(countryCode, city){
-  const myApiKey = "d5012fb4f7ae03546323e8025ffbc073"
+async function fetchWeather(countryCode, city) {
+  const myApiKey = "d5012fb4f7ae03546323e8025ffbc073";
   let response = await fetch(
     `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&APPID=${myApiKey}&units=metric`
   );
@@ -7,27 +7,27 @@ async function fetchWeather(countryCode, city){
   return weather;
 }
 
-async function showWeather(){
+async function showWeather() {
   let country = document.getElementById("pais");
   let countryCode = country.options[country.selectedIndex].value;
   let city = document.getElementById("ciudad").value;
 
   let weather = await fetchWeather(countryCode, city);
   let nombreCiudad = document.getElementById("nombre_ciudad");
+  let img = document.getElementById("img");
   let temperature = document.getElementById("temperature");
   let temperatureMax = document.getElementById("temperature_max");
   let temperatureMin = document.getElementById("temperature_min");
 
-
-nombreCiudad.innerHTML= weather["name"]
-temperature.innerHTML= weather["main"]["temp"] + " °C"
-temperatureMax.innerHTML="Max: " + weather  ["main"]["temp_max"] +" °C"
-temperatureMin.innerHTML= "Min: " + weather  ["main"]["temp_min"] + " °C"
-
-
+  nombreCiudad.innerHTML = weather["name"];
+  const iconUrl = `http://openweathermap.org/img/wn/${weather["weather"][0]["icon"]}@2x.png`;
+  img.src = iconUrl;
+  temperature.innerHTML = weather["main"]["temp"] + " °C";
+  temperatureMax.innerHTML = "Max: " + weather["main"]["temp_max"] + " °C";
+  temperatureMin.innerHTML = "Min: " + weather["main"]["temp_min"] + " °C";
 }
-const form= document.getElementById("form")
-form.addEventListener("submit",(event)=>{
-  event.preventDefault()
-  showWeather()
-})
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  showWeather();
+});
