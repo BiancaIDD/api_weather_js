@@ -8,7 +8,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  
   margin: 0;
 }
 
@@ -59,12 +59,16 @@ select, #ciudad{
   height: 35px;
 }
 
-.button{
-
-  
+button{
   width: 50%;
-  height: 35px;
+  height: 60px;
+  background-color: transparent;
+  border: transparent;
 }
+
+
+
+svg{font-weight:bold;max-width:600px;height:100%;}
 
 video{
   position: fixed;
