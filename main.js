@@ -21,8 +21,8 @@ async function showWeather(){
 
 nombreCiudad.innerHTML= weather["name"]
 temperature.innerHTML= weather["main"]["temp"] + " °C"
-temperatureMax.innerHTML= weather["main"]["temp_max"] +" °C"
-temperatureMin.innerHTML= weather["main"]["temp_min"] + " °C"
+temperatureMax.innerHTML="Max: " + weather  ["main"]["temp_max"] +" °C"
+temperatureMin.innerHTML= "Min: " + weather  ["main"]["temp_min"] + " °C"
 
 
 }

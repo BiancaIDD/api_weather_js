@@ -4,39 +4,38 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin: 0;
 }
 
-main{
+main {
   display: flex;
   background-color: transparent;
-  color: #F5EFFF;
+  color: #f5efff;
   flex-direction: column;
   gap: 25px;
   height: 600px;
   width: 85%;
   justify-content: center;
-
 }
 
-div{
+div {
   display: flex;
-  width:100% ;
-  height:50%;
+  width: 100%;
+  height: 50%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 25px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: xx-large;
 }
 
-form{
+form {
   display: flex;
   width: 100%;
   height: 35%;
@@ -46,31 +45,33 @@ form{
   align-items: center;
 }
 
-.form_data{
+.form_data {
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: row;
-
 }
 
-select, #ciudad{
+select,
+#ciudad {
   width: 40%;
   height: 35px;
 }
 
-button{
+button {
   width: 50%;
   height: 60px;
   background-color: transparent;
   border: transparent;
 }
 
+svg {
+  font-weight: bold;
+  max-width: 600px;
+  height: 100%;
+}
 
-
-svg{font-weight:bold;max-width:600px;height:100%;}
-
-video{
+video {
   position: fixed;
   right: 0;
   bottom: 0;
